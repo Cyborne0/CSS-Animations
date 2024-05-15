@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    
+}
+a{
+    position: relative;
+    color: #262626;
+    text-decoration: none;
+    font-size: 40px;
+    border: 3px solid black;
+     
+    padding: 40px 80px;
+    overflow: hidden;
+    transition: all 1s;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 20px 40px;
+    transition: all 0.5s;
+
+
+}
+a::before{
+    position: absolute;
+    content: "Gumb";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /*background-color: #262626; */
+    
+    transition: all 1s;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transform: scale(6) rotate(360deg);
+   
+}
+a:hover::before{
+    transform: scale(1) rotate(0deg);
+    opacity: 1; 
+    color: white
+    
+
+}
+a:hover{
+    background: red;
+    color: red;
+}

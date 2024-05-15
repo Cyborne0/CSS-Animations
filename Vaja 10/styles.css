@@ -1,0 +1,41 @@
+body{
+
+}
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: gibanje;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes gibanje{
+    /*from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(800px);
+    }*/
+
+
+    0%{
+        transform: translate(0px, 0px) rotate(80deg);
+        background-color: blue;
+    }
+    25%{
+        transform: translate(800px, 0px) rotate(360deg);
+        background-color: magenta;
+    }
+    50%{
+        transform: translate(800px, 800px) rotate(60deg);
+        background-color: cyan;
+    }
+    75%{
+        transform: translate(0px, 800px) rotate(90deg);
+        background-color: lime;
+    }
+
+
+}
