@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    font-family: sans-serif;
+}
+h1{
+    background-image: url(
+        "https://c8.alamy.com/comp/2B19Y0W/storm-waves-seamless-pattern-raging-ocean-water-sea-wave-and-vintage-japanese-storms-print-vector-illustration-background-2B19Y0W.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 200% 100%;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    margin-top: 200px;
+                    font-size: 80px;
+                    text-align: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    
+                    
+                    font-weight: 800;
+                    animation: gibanje 2s linear infinite alternate;
+                    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+
+}
+
+
+@keyframes gibanje{
+ from{
+    
+    background-position: left;  
+    transform: translateX(50%) rotate(10deg);  
+ }
+    to{
+        
+        background-position: right;
+        transform: translateX(-50%) rotate(-10deg);
+    }
+}

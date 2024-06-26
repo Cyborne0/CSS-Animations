@@ -1,0 +1,128 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+
+}
+.container{
+    width: 600px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.background{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../slike/image.jpg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    animation: ozadje 10s linear infinite;
+    
+}
+.container .kolesar{
+    position: absolute;
+    bottom: 0px;
+    left: 60px;
+    height: 150px;
+
+}
+.kolo{
+    position: absolute;
+    height: 50px;
+    animation: 5s animation_kolo linear infinite;
+
+}
+.kolo_l{
+    bottom: 6px;
+    left: 84px;
+}
+.kolo_d{
+    bottom: 6px;
+    left: 140px;
+}
+@keyframes ozadje{
+    from { background-position: bottom left;}
+    to { background-position: bottom right;}
+}
+@keyframes animation_kolo{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+div.hover_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(253, 173, 0, 1), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 0.5s;
+    transform: translateY(100%);
+}
+div.container:hover div.hover_container{
+    
+    transform: translateY(0);
+}
+div.hover_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+div.hover_container h1{
+    color: transparent;
+    font-size: 60px;
+    background-image: url(../slike/imageB.jpg);
+    -webkit-background-clip: text;
+    background-size: 50%;
+    animation: 2s zibanje linear infinite alternate;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+@keyframes zibanje{
+    from{
+        transform: rotate(10deg);
+        background-position: left;
+
+    }
+    to{
+        transform: rotate(-10deg);
+        background-position: right;
+    }
+}
+button{
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: 0.5s;
+    transform: translateY(100%);
+    z-index: -1;
+}
+button:hover::before{
+    transform: translateY(0);
+}
